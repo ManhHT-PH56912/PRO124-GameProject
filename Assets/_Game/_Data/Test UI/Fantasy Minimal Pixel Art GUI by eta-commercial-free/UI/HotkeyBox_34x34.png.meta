@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HotkeyBox_34x34_0: 3736619520553653961
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

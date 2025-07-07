@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EquipLabel_13x14_0: -8220907671338445884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

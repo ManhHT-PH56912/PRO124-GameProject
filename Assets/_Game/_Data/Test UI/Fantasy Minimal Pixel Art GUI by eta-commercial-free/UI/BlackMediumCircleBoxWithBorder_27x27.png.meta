@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlackMediumCircleBoxWithBorder_27x27_0: 3516071402465835077
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

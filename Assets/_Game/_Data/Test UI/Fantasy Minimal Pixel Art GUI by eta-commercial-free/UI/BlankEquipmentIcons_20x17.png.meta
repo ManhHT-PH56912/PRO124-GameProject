@@ -311,7 +311,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BlankEquipmentIcons_20x17_0: -1795086560503643605
+      BlankEquipmentIcons_20x17_1: 2360397459311352072
+      BlankEquipmentIcons_20x17_2: -3173339044444833046
+      BlankEquipmentIcons_20x17_3: 8191879255680658513
+      BlankEquipmentIcons_20x17_4: -4261042371152360566
+      BlankEquipmentIcons_20x17_5: -6183568976705198516
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

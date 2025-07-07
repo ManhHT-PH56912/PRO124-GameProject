@@ -286,7 +286,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BuffIcons_16x16_0: 5733529238017492525
+      BuffIcons_16x16_1: -3528398185199102372
+      BuffIcons_16x16_2: 2369335298919877486
+      BuffIcons_16x16_3: 6904708645501274611
+      BuffIcons_16x16_4: -1752410931558733979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

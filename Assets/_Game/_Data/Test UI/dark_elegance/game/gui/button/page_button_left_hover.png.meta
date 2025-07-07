@@ -211,7 +211,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      page_button_left_hover_0: 2140050744755824
+      page_button_left_hover_1: -5433763843627204298
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

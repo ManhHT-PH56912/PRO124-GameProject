@@ -236,7 +236,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pref_overlay_hover_0: 5063410166325113624
+      pref_overlay_hover_1: 4383015145321771766
+      pref_overlay_hover_2: -6172598701325753630
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

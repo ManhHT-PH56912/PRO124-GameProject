@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PatternMiddleBottomBG_199x48_0: 4589489395629770560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

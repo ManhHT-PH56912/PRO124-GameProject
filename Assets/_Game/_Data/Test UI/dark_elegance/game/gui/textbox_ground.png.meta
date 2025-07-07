@@ -361,7 +361,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      textbox_ground_0: -788994369497008119
+      textbox_ground_1: -8317112307744123769
+      textbox_ground_2: 526853426759559318
+      textbox_ground_3: 4152309523626920971
+      textbox_ground_4: -3701845449052862445
+      textbox_ground_5: 8975652867572831313
+      textbox_ground_6: 5266676018410690762
+      textbox_ground_7: -2090553039680926366
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

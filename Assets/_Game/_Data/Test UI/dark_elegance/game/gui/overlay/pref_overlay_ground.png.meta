@@ -236,7 +236,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pref_overlay_ground_0: 5592697630464862555
+      pref_overlay_ground_1: 6882599335148905751
+      pref_overlay_ground_2: -6101522002997120676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

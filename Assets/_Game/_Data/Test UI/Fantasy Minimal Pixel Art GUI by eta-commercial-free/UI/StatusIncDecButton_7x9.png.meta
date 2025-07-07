@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      StatusIncDecButton_7x9_0: 8434124247007698823
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

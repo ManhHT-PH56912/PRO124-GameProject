@@ -261,7 +261,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HighlightButton_60x23_0: -3373058400213887287
+      HighlightButton_60x23_1: 2223191029193699495
+      HighlightButton_60x23_2: -2966827166489892275
+      HighlightButton_60x23_3: -7695757078853839710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      vertical_hover_bar_0: 481527989989350519
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

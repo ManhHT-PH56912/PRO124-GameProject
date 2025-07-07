@@ -361,7 +361,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      textbox_selected_hover_0: 3759598834669639979
+      textbox_selected_hover_1: -7670888956258614708
+      textbox_selected_hover_2: 5534710933730207376
+      textbox_selected_hover_3: 5855537274776443127
+      textbox_selected_hover_4: -5874605991878571717
+      textbox_selected_hover_5: 8622579574070119466
+      textbox_selected_hover_6: -1836747316312769527
+      textbox_selected_hover_7: -1063886661922530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

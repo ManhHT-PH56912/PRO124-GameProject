@@ -17,6 +17,11 @@ public class MeeleEnemy : EnemyBase, IObserver
 
     [SerializeField] private Transform visual;
 
+    [Header("Ground Check Settings")]
+    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float groundCheckDistance = 1f;
+    [SerializeField] private Vector2 groundCheckOffset = new Vector2(0.5f, 0);
+
     private enum State { Idle, Move, Attack, Die, Return }
     private State currentState = State.Idle;
 
@@ -25,11 +30,8 @@ public class MeeleEnemy : EnemyBase, IObserver
     private float lastAttackTime = -999f;
     private bool isAttacking = false;
 
-    /*──────────────────────────────────────*/
-
     private void Awake()
     {
-
     }
 
     private void Start()
@@ -44,6 +46,7 @@ public class MeeleEnemy : EnemyBase, IObserver
 
     private void Update()
     {
+        Debug.Log($"Current State: {currentState}");
         if (currentState != State.Die)
         {
             EvaluateState();
@@ -59,11 +62,9 @@ public class MeeleEnemy : EnemyBase, IObserver
         }
     }
 
-    /*──────────────────────────────────────*/
     public void EvaluateState()
     {
-        if (player == null) return;
-        if (currentState == State.Die) return;
+        if (player == null || currentState == State.Die) return;
 
         float distToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -74,8 +75,6 @@ public class MeeleEnemy : EnemyBase, IObserver
         else
         {
             float distToStart = Vector3.Distance(transform.position, startPos);
-
-            // Chỉ cho phép Return nếu không phải đang Idle (đang tuần tra)
             if (distToStart > returnThreshold && currentState != State.Idle)
             {
                 currentState = State.Return;
@@ -87,11 +86,8 @@ public class MeeleEnemy : EnemyBase, IObserver
         }
     }
 
-
-
     public override void Idle()
     {
-        // Tuần tra xung quanh startPos
         transform.Translate(Vector3.right * patrolDir * Speed * WakeSpeed * Time.deltaTime);
 
         float offset = transform.position.x - startPos.x;
@@ -108,6 +104,14 @@ public class MeeleEnemy : EnemyBase, IObserver
     public override void Move(float speed)
     {
         if (isAttacking) return;
+
+        // Raycast kiểm tra phía trước có còn mặt đất không
+        if (!IsGroundAhead())
+        {
+            currentState = State.Return;
+            return;
+        }
+
         Vector3 targetPos = new Vector3(player.position.x, transform.position.y, player.position.z);
         Vector3 dir = (targetPos - transform.position).normalized;
 
@@ -125,7 +129,6 @@ public class MeeleEnemy : EnemyBase, IObserver
         if (dir.x != 0)
             Flip(Mathf.Sign(dir.x));
 
-        // Khi về gần đến startPos thì chuyển sang Idle
         if (Vector3.Distance(transform.position, startPos) < returnThreshold)
         {
             currentState = State.Idle;
@@ -143,8 +146,8 @@ public class MeeleEnemy : EnemyBase, IObserver
     private IEnumerator DoMeleeAttack()
     {
         isAttacking = true;
-        attackHitbox.SetActive(true);           // Bật collider tấn công
-        yield return new WaitForSeconds(0.3f);  // Thời gian trúng đòn
+        attackHitbox.SetActive(true);
+        yield return new WaitForSeconds(0.3f);
         attackHitbox.SetActive(false);
         isAttacking = false;
     }
@@ -172,20 +175,35 @@ public class MeeleEnemy : EnemyBase, IObserver
             vScale.x = dirX * Mathf.Abs(vScale.x);
             visual.localScale = vScale;
         }
+
+        patrolDir = (int)Mathf.Sign(dirX); // Cập nhật hướng tuần tra để IsGroundAhead đúng
     }
 
     public void ReturnPool()
     {
-        // Nếu dùng pooling thì gọi ở đây
         ObServerManager.Instance.removeObsever(this);
         Destroy(gameObject); // hoặc setActive(false) nếu pooling
+    }
+
+    private bool IsGroundAhead()
+    {
+        Vector2 origin = transform.position;
+        origin += new Vector2(patrolDir * groundCheckOffset.x, groundCheckOffset.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(origin, Vector2.down, groundCheckDistance, groundLayer);
+#if UNITY_EDITOR
+        Debug.DrawRay(origin, Vector2.down * groundCheckDistance, hit.collider ? Color.green : Color.red);
+#endif
+        return hit.collider != null;
     }
 
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.yellow; Gizmos.DrawWireSphere(transform.position, aggroRange);
-        Gizmos.color = Color.red; Gizmos.DrawWireSphere(transform.position, attackRange);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, aggroRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 #endif
 }

@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ItemInteractIcons_14x12_0: -1415848735993195842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

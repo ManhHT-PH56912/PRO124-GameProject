@@ -261,7 +261,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      HighlightSlot_26x26_0: -7489459550906162896
+      HighlightSlot_26x26_1: 1881759577051673358
+      HighlightSlot_26x26_2: -7236312562399157680
+      HighlightSlot_26x26_3: -7634663924232437667
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
