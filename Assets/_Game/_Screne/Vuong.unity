@@ -655,7 +655,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &788356147
 Transform:
   m_ObjectHideFlags: 0
@@ -688,7 +688,7 @@ MonoBehaviour:
   aggroRange: 3
   attackRange: 1
   patrolDistance: 3
-  WakeSpeed: 0.3
+  WakeSpeed: 0.5
   returnThreshold: 0.1
   attackHitbox: {fileID: 738989918}
   attackCooldown: 1.2
@@ -1063,7 +1063,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1303345575
 Rigidbody2D:
   serializedVersion: 5
