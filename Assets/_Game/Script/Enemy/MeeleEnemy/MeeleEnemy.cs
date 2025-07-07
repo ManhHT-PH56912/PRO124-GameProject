@@ -29,7 +29,7 @@ public class MeeleEnemy : EnemyBase, IObserver
 
     private void Awake()
     {
-        
+
     }
 
     private void Start()

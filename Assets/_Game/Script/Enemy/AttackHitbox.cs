@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AttackHitbox : MonoBehaviour
 {
-   [SerializeField] private int damage = 10;
+    [SerializeField] private int damage = 10;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -15,7 +15,7 @@ public class AttackHitbox : MonoBehaviour
             // if (player != null)
             // {
             //     player.TakeDamage(damage);
-            // }
+            // }                                            
         }
     }
 
